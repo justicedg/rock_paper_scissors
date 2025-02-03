@@ -1,3 +1,9 @@
+function getHumanChoice() {
+    return prompt('Enter "Rock, Paper, or Scissors"').toLowerCase(); 
+}
+
+// console.log(getHumanChoice());
+
 function getComputerChoice() {
     return Math.random();
 }
@@ -10,16 +16,16 @@ if (getComputerChoice() >= 0.7) {
     console.log("scissors");
 }
 
-function getHumanChoice() {
-    prompt('Enter "Rock, Paper, or Scissors"'); 
+let humanScore = 0;
+let computerScore = 0; 
+
+let humanChoice = getHumanChoice();
+let computerChoice = getComputerChoice();
+
+function playRound(humanChoice, computerChoice) {
+
 }
 
-console.log(getHumanChoice());
-
-if (getHumanChoice("rock")) {
-    alert("rock");
-} else if (getHumanChoice("paper")) {
-    alert("paper");
-} else {
-    alert("scissors");
+if (humanChoice === computerChoice) {
+    alert("Draw");
 }
