@@ -1,31 +1,27 @@
-// return random integer from computer
+// get random integer from computer
 function getComputerChoice() {
     const computerChoice = Math.random();
-// convert random integer into strings
+    // convert random integer to string
     if (computerChoice >= 0.7) {
         return "rock";
     } else if (computerChoice <= 0.4) {
         return "paper";
     } else {
         return "scissors";
-    }
+    } 
 }
-// console.log(getComputerChoice());
 // get user's choice
 function getHumanChoice() {
     let humanChoice = prompt("Rock, Paper, or Scissors?").toLowerCase();
     return humanChoice;
-    // console.log(humanChoice); 
 }
-// console.log(getHumanChoice());
 // initialize score
 let humanScore = 0;
 let computerScore = 0; 
-// play a single round
+// play round
 function playRound() {
     const humanChoice = getHumanChoice();
     const computerChoice = getComputerChoice();
-    
     if (humanChoice == computerChoice) {
         console.log("DRAW!")
         }
@@ -55,7 +51,7 @@ function playRound() {
     }                
     console.log(humanScore, computerScore)  
 }
-
+// play 5 round game
 function playGame() {
     playRound()
     playRound()
@@ -71,4 +67,6 @@ function playGame() {
         else if (computerScore === humanScore){
             console.log("It's a tie!")
     }
-    }playGame();
+}
+// execute game
+    playGame();
